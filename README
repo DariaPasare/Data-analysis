@@ -1,0 +1,28 @@
+1. Acest task se bazeaza pe un set de functii pentru identificarea outlierilor intr-un set de date folosind detectia anomaliilor bazata pe distributia 
+gaussiana multivariata.
+
+Estimate_gaussian: Aceasta functie estimeaza parametrii unei distributii gaussiene pentru un set de date dat.
+Multivariate_gaussian: Calculeaza functia de densitate de probabilitate pentru fiecare exemplu din setul de date dat, folosind distributia gaussiana
+multivariata.
+Optimal_threshold: Gaseste cel mai bun prag pentru selectarea outlierilor, bazat pe valorile de adevar si pe probabilitatile estimate.
+
+2. In acest task impart mai intai un set de date in doua subseturi distincte: un set de antrenament si un set de testare. 
+Procesul este realizat in conformitate cu un parametru dat(percentage), care indica proportia datelor care vor fi alocate setului de antrenament,
+in timp ce restul vor fi atribuite setului de testare. 
+
+In 'get_prediction_params' calculez vectorul de parametri de predictie folosind metode neiterative. Functia se bazeaza pe descompunerea Cholesky a 
+unei matrici asociate sistemului si inversa matricii inferioare triunghiulare rezultate.
+In 'get_prediction_params_iterative' estimez parametrii de predictie folosind metode iterative, in special metoda gradientului conjugat.
+iar in 'eval_value' prezic valoarea unui vector de intrare bazandu-ma pe modelele antrenate. Functia utilizeaza parametrii de predictie si functia de kernel 
+pentru a estima valoarea vectorului de intrare.
+
+3. Aceasta colectie de functii ofera un set de instrumente pentru prelucrarea si analiza datelor textuale. Functia 'k_secv' genereaza k-secvente 
+dintr-un array dat, 'distinct_words' furnizeaza un set distinct de cuvinte dintr-o lista de token-uri. 
+'word_idx' si 'k_secv_idx' construiesc dictionare care asociaza cuvintelor sau k-secventelor din lista un index unic, facilitand referinta la acestea in 
+cadrul altor operatii. Functia 'stochastic_matrix' genereaza o matrice stocastica, reflectand relatiile dintre k-secventele si cuvintele dintr-un corpus 
+de texte.
+
+
+
+
+
